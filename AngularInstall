@@ -1,0 +1,13 @@
+#!/bin/bash
+nvm install node
+npm install -g npm
+npm install -g @angular/cli
+
+#rodar o angular
+ng serve --host 0.0.0.0 --port 8080 --disableHostCheck
+
+#Criar uma api-falsa com json server
+npm install -g json-server
+
+#Rodar json-server
+json-server db.json --port 8080 --host 0.0.0.0
